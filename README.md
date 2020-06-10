@@ -16,6 +16,6 @@ Users can observe:
 
 The tool also has sliders to control floor and ceiling values for coloring the feature attributions. To fully use the tool, user must upload both input image and corresponding ground truth mask.
 
-### Requirements
+Requirements:
 
 PyQt, Keras, Tensorflow, OpenCV2, scikit-learn, Pillow and DeepExplain (https://github.com/marcoancona/DeepExplain)
