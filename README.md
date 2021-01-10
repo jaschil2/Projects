@@ -18,7 +18,7 @@ The tool also has sliders to control floor and ceiling values for coloring the f
 
 ## GSA-Image
 
-This tool was developed as part of the Gr-ResQ node at the University of Illinois at Urbana-Champaign. It is used for post-processing graphene SEM images and extracting relevant information, such as graphene coverage or graphene alignment. The tool is also hosted on nanoHUB.org at https://nanohub.org/tools/gsaimage.
+This tool was developed as part of the Gr-ResQ node at the University of Illinois at Urbana-Champaign (Project can also be found at https://github.com/nanoMFG/GSA-Image). It is used for post-processing graphene SEM images and extracting relevant information, such as graphene coverage or graphene alignment. The tool is also hosted on nanoHUB.org at https://nanohub.org/tools/gsaimage.
 
 Example Segmentation using K-Means:
 
