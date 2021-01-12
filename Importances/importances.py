@@ -15,6 +15,8 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score
 from functools import wraps
 import datetime
 
+MODEL_PATH = 'path/to/model.hdf5'
+
 class ImageItem(pg.ImageItem):
     clicked = QtCore.pyqtSignal(object)
     def __init__(self,*args,**kwargs):
@@ -79,8 +81,6 @@ attribution_methods = [
     'elrp',
     'deeplift'
     ]
-
-model_path = os.path.join(os.getcwd(),'N58_1','FOLD_00','model_E099_0.897.hdf5')
 
 
 class Main(QtWidgets.QWidget):
@@ -230,7 +230,7 @@ class Main(QtWidgets.QWidget):
 
             inp = self._input[np.newaxis,...,np.newaxis]
 
-            model = load_model(model_path)
+            model = load_model(MODEL_PATH)
             self._output = np.rint(model.predict(inp))[0,...,0]
             self.outputItem.setImage(self._output,levels=(0,1))
 
@@ -286,7 +286,7 @@ class Main(QtWidgets.QWidget):
                     xs = self._input,
                     method = method,
                     mode = mode,
-                    model_path = model_path,
+                    MODEL_PATH = MODEL_PATH,
                     pos = pos
                     )
                 self.status('Finished.')
@@ -294,9 +294,9 @@ class Main(QtWidgets.QWidget):
             except Exception as e:
                 self.status(str(e))
 
-    def calculateAttributions(self,xs,method,mode,model_path,pos=None):
+    def calculateAttributions(self,xs,method,mode,MODEL_PATH,pos=None):
         with DeepExplain(session=K.get_session()) as de:
-            model = load_model(model_path)
+            model = load_model(MODEL_PATH)
             flat = Reshape(target_shape=(256*256,))(model.layers[-1].output)
             flat_model = Model(model.layers[0].input,flat)
 
