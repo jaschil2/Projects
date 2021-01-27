@@ -26,4 +26,4 @@ Example Segmentation using K-Means:
 
 ## U-Net
 
-This project contains my work developing a U-Net neural network for classifying SEM images of graphene (Project can also be found at https://github.com/nanoMFG/unet-sem). The model will become part of the image tool to conduct image segmentation with no human involvement. The goal is to be able to quantify graphene quality automatically when users upload their SEM images into the Gr-ResQ database. Using the inputted synthesis procedures along with the quality metrics, one will be able to optimize the graphene synthesis process.
+This project contains my work developing a U-Net neural network for classifying SEM images of graphene (Project can also be found at https://github.com/nanoMFG/unet-sem). The model is part of Gr-ResQ with the objective to conduct image segmentation with no human involvement. The goal is to be able to quantify graphene quality automatically when users upload their SEM images into the Gr-ResQ database. Using the inputted synthesis procedures along with the quality metrics, one will be able to optimize the graphene synthesis process.
